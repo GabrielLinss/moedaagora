@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      fetch('https://economia.awesomeapi.com.br/all/USD-BRL,EUR-BRL,ARS-BRL,ETH-BRL,LTC-BRL,BTC-BRL,CNY-BRL,JPY-BRL,USDT-BRL,CAD-BRL,AUD-BRL')
+        .then(response => response.json())
+        .then(data => {
+          const dolar = data["USD"];
+          const dolarT = data["USDT"];
+          const dolarC = data["CAD"];
+          const dolarA = data["AUD"];
+          const euro = data["EUR"];
+          const peso = data["ARS"];
+          const ethereum = data["ETH"];
+          const litecoin = data["LTC"];
+          const bitcoin = data["BTC"];
+          const yuan = data["CNY"];
+          const iene = data["JPY"];
+
+          $('#dolar').text(`Dólar Comercial: R$ ${dolar.high}`);
+          $('#dolarT').text(`Dólar Turismo: R$ ${dolarT.high}`);
+          $('#dolarC').text(`Dólar Canadense: R$ ${dolarC.high}`);
+          $('#dolarA').text(`Dólar Australiano: R$ ${dolarA.high}`);
+          $('#euro').text(`Euro: R$ ${euro.high}`);
+          $('#peso').text(`Peso Argentino: R$ ${peso.high}`);
+          $('#ethereum').text(`Ethereum: R$ ${ethereum.high}`);
+          $('#litecoin').text(`Litecoin: R$ ${litecoin.high}`);
+          $('#bitcoin').text(`Bitcoin: R$ ${bitcoin.high}`);
+          $('#yuan').text(`Yuan Chinês: R$ ${yuan.high}`);
+          $('#iene').text(`Iene Japonês: R$ ${iene.high}`);
+        })
+        .catch(error => console.log(error));
+    </script>
+
+    <title>Moeda Agora</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img 
+          src="https://i.pinimg.com/originals/6c/cf/e0/6ccfe0efc6fd4a3d5093deb1591b5283.png"
+          width="30" height="30" alt="">
+        Moeda Agora
+      </a>
+    </nav>
+    <div class="container-fluid">
+      <div class="row my-5">
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 col-xl-3 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img 
+              src="https://img.freepik.com/fotos-gratis/bandeira-americana_1232-2671.jpg?size=626&ext=jpg" 
+              class="card-img-top" 
+              height="150"
+              alt="">
+            <div class="card-body">
+              <p class="card-text" id="dolar"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 col-xl-3 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img 
+              src="https://img.freepik.com/fotos-gratis/bandeira-americana_1232-2671.jpg?size=626&ext=jpg" 
+              class="card-img-top" 
+              height="150"
+              alt="">
+            <div class="card-body">
+              <p class="card-text" id="dolarT"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 col-xl-3 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img 
+              src="https://i.pinimg.com/originals/99/eb/b4/99ebb4c9b58c8f083ea163f95b709c16.png" 
+              class="card-img-top" 
+              height="150"
+              alt="">
+            <div class="card-body">
+              <p class="card-text" id="euro"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 col-xl-3 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img 
+              src="https://i.pinimg.com/originals/09/70/32/097032eee9189dc4e6e955d6d37f7135.jpg" 
+              class="card-img-top" 
+              height="150"
+              alt="">
+            <div class="card-body">
+              <p class="card-text" id="peso"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 col-xl-3 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img 
+              src="https://cointimes.com.br/wp-content/uploads/2019/11/eth.jpg" 
+              class="card-img-top" 
+              height="150"
+              alt="">
+            <div class="card-body">
+              <p class="card-text" id="ethereum"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 col-xl-3 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img 
+              src="https://s3.criptofacil.com/wp-content/uploads/2017/04/Uma-visa%CC%83o-sobre-a-escalabilidade-do-Litecoin-vs-Bitcoin.jpg" 
+              class="card-img-top" 
+              height="150"
+              alt="">
+            <div class="card-body">
+              <p class="card-text" id="litecoin"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 col-xl-3 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img 
+              src="https://img.olhardigital.com.br/uploads/acervo_imagens/2017/05/r16x9/20170512190435_1200_675_-_bitcoin.jpg" 
+              class="card-img-top" 
+              height="150"
+              alt="">
+            <div class="card-body">
+              <p class="card-text" id="bitcoin"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 col-xl-3 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img 
+              src="https://i.pinimg.com/originals/c7/aa/68/c7aa68c4a9dd84e8cf5696d775642762.jpg" 
+              class="card-img-top" 
+              height="150"
+              alt="">
+            <div class="card-body">
+              <p class="card-text" id="yuan"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 col-xl-3 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img 
+              src="https://www.japanvisitor.com/images/content_images/japanflag20201.jpg" 
+              class="card-img-top" 
+              height="150"
+              alt="">
+            <div class="card-body">
+              <p class="card-text" id="iene"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 col-xl-3 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img 
+              src="https://www.snopes.com/tachyon/2015/07/canadaflag.jpg?resize=865,452" 
+              class="card-img-top" 
+              height="150"
+              alt="">
+            <div class="card-body">
+              <p class="card-text" id="dolarC"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-6 col-xl-3 mb-3">
+          <div class="card" style="width: 18rem;">
+            <img 
+              src="https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/3d/40/ad/4.jpg" 
+              class="card-img-top" 
+              height="150"
+              alt="">
+            <div class="card-body">
+              <p class="card-text" id="dolarA"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container">
+      <div class="row">
+        <div class="col">
+          <center>
+            <span>
+              Desenvolvido por 
+              <strong>
+                <a href="https://github.com/GabrielLinss" target="_blank">
+                  Gabriel Lins
+                </a>
+              </strong>
+            </span>
+          </center>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
