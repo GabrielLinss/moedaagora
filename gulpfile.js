@@ -11,4 +11,4 @@ gulp.task('watch', function() {
     gulp.watch(['node_modules/bootstrap/scss/*.scss', 'src/scss/*.scss'], gulp.series('sass'));
 });
 
-gulp.task('default', gulp.series('sass', 'watch'));
+gulp.task('default', gulp.series('sass'));
