@@ -1,5 +1,5 @@
 .bg-light {
-  background: linear-gradient(to bottom, #33ccff 0%, #00ff99 100%); }
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); }
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
   margin-top: 100px; }
