@@ -14,17 +14,60 @@ $(document).ready(function() {
           const yuan = data["CNY"];
           const iene = data["JPY"];
 
-          $('#dolar').text(`Dólar Comercial: R$ ${dolar.high}`);
-          $('#dolarT').text(`Dólar Turismo: R$ ${dolarT.high}`);
-          $('#dolarC').text(`Dólar Canadense: R$ ${dolarC.high}`);
-          $('#dolarA').text(`Dólar Australiano: R$ ${dolarA.high}`);
-          $('#euro').text(`Euro: R$ ${euro.high}`);
-          $('#peso').text(`Peso Argentino: R$ ${peso.high}`);
-          $('#ethereum').text(`Ethereum: R$ ${ethereum.high}`);
-          $('#litecoin').text(`Litecoin: R$ ${litecoin.high}`);
-          $('#bitcoin').text(`Bitcoin: R$ ${bitcoin.high}`);
-          $('#yuan').text(`Yuan Chinês: R$ ${yuan.high}`);
-          $('#iene').text(`Iene Japonês: R$ ${iene.high}`);
+          $('#dolar').text(`${dolar.name}`);
+          $('#dolarHigh').text(`Mais alto: R$ ${dolar.high}`);
+          $('#dolarLow').text(`Mais baixo: R$ ${dolar.low}`);
+          $('#dolarVariation').text(`Última variação: ${dolar.pctChange}%`);
+
+          $('#dolarT').text(`${dolarT.name}`);
+          $('#dolarTHigh').text(`Mais alto: R$ ${dolarT.high}`);
+          $('#dolarTLow').text(`Mais baixo: R$ ${dolarT.low}`);
+          $('#dolarTVariation').text(`Última variação: ${dolarT.pctChange}%`);
+
+          $('#dolarC').text(`${dolarC.name}`);
+          $('#dolarCHigh').text(`Mais alto: R$ ${dolarC.high}`);
+          $('#dolarCLow').text(`Mais baixo: R$ ${dolarC.low}`);
+          $('#dolarCVariation').text(`Última variação: ${dolarC.pctChange}%`);
+
+          $('#dolarA').text(`${dolarA.name}`);
+          $('#dolarAHigh').text(`Mais alto: R$ ${dolarA.high}`);
+          $('#dolarALow').text(`Mais baixo: R$ ${dolarA.low}`);
+          $('#dolarAVariation').text(`Última variação: ${dolarA.pctChange}%`);
+
+          $('#euro').text(`${euro.name}`);
+          $('#euroHigh').text(`Mais alto: R$ ${euro.high}`);
+          $('#euroLow').text(`Mais baixo: R$ ${euro.low}`);
+          $('#euroVariation').text(`Última variação: ${euro.pctChange}%`);
+
+          $('#peso').text(`${peso.name}`);
+          $('#pesoHigh').text(`Mais alto: R$ ${peso.high}`);
+          $('#pesoLow').text(`Mais baixo: R$ ${peso.low}`);
+          $('#pesoVariation').text(`Última variação: ${peso.pctChange}%`);
+
+          $('#ethereum').text(`${ethereum.name}`);
+          $('#ethereumHigh').text(`Mais alto: R$ ${ethereum.high}`);
+          $('#ethereumLow').text(`Mais baixo: R$ ${ethereum.low}`);
+          $('#ethereumVariation').text(`Última variação: ${ethereum.pctChange}%`);
+
+          $('#litecoin').text(`${litecoin.name}`);
+          $('#litecoinHigh').text(`Mais alto: R$ ${litecoin.high}`);
+          $('#litecoinLow').text(`Mais baixo: R$ ${litecoin.low}`);
+          $('#litecoinVariation').text(`Última variação: ${litecoin.pctChange}%`);
+
+          $('#bitcoin').text(`${bitcoin.name}`);
+          $('#bitcoinHigh').text(`Mais alto: R$ ${bitcoin.high}`);
+          $('#bitcoinLow').text(`Mais baixo: R$ ${bitcoin.low}`);
+          $('#bitcoinVariation').text(`Última variação: ${bitcoin.pctChange}%`);
+
+          $('#yuan').text(`${yuan.name}`);
+          $('#yuanHigh').text(`Mais alto: R$ ${yuan.high}`);
+          $('#yuanLow').text(`Mais baixo: R$ ${yuan.low}`);
+          $('#yuanVariation').text(`Última variação: ${yuan.pctChange}%`);
+
+          $('#iene').text(`${iene.name}`);
+          $('#ieneHigh').text(`Mais alto: R$ ${iene.high}`);
+          $('#ieneLow').text(`Mais baixo: R$ ${iene.low}`);
+          $('#ieneVariation').text(`Última variação: ${iene.pctChange}%`);
         })
         .catch(error => console.log(error));
 });
