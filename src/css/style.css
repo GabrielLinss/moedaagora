@@ -1,6 +1,9 @@
 .bg-light {
   background: linear-gradient(to bottom, #33ccff 0%, #00ff99 100%); }
 
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+  margin-top: 100px; }
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
